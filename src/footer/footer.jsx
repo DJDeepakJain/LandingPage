@@ -1,10 +1,62 @@
 
 import Logo from '../header/logo';
+import React, { useState } from 'react';
 
 export default function Footer() {
 
   // ... (rest of the code)
+  const [email, setEmail] = useState('');
+  const [isvalid, setIsvalid] = useState(false);
+  const [isSubscribe, setIsSubscribe] = useState(false);
+  const [errMessage, setErrMessage] = useState('');
 
+  const subscribe = async (e) => {
+    e.preventDefault();
+    try {
+      const validEmail = new RegExp('^[a-zA-Z0-9._:$!%-]+@[a-zA-Z0-9.-]+.[a-zA-Z]$');
+      if (!email) {
+        setIsvalid(true);
+        setErrMessage('Enter your email');
+      } else if (!validEmail.test(email)) {
+        setIsvalid(true);
+        setErrMessage('Enter a valid email');
+      } else {
+        const requestBody = {
+          email: email,
+        };
+        console.log(requestBody);
+        const response = await fetch(`https://api.offerghosting.com/auth/newsletters`, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(requestBody),
+        });
+        if (response.status === 201) {
+            setIsSubscribe(true);
+            setErrMessage('Thanks for subscribing');
+            setEmail('');
+          } else if (response.status === 400) {
+            setIsvalid(true);
+            setErrMessage(`${email} is already exist in our platform`);
+          }
+          
+      
+      }
+    } catch (error) {
+      console.log('error', error);
+    }
+  };
+
+  const handleChange = (e) => {
+    try {
+      setEmail(e.target.value);
+      setIsvalid(false);
+    } catch (error) {
+      console.log('error', error);
+    }
+  };
+  
   return (
     <footer className="bg-gray-400 text-white p-4">
         <div className="max-w-6xl mx-auto  sm:px-6 pb-4">
@@ -100,14 +152,21 @@ export default function Footer() {
                 <div className="w-full">
                   <label className="block text-sm sr-only" htmlFor="newsletter">Email</label>
                   <div className="relative flex items-center max-w-xs">
-                    <input id="newsletter" type="email" className="form-input w-full text-gray-800 px-3 py-2 pr-12 text-sm" placeholder="Your email" required />
-                    <button type="submit" className="absolute inset-0 left-auto" aria-label="Subscribe">
+                    <input id="newsletter" type="email" 
+                    className="form-input w-full text-gray-800 px-3 py-2 pr-12 text-sm" 
+                    placeholder="Your email" required 
+                    value={email}
+                      onChange={handleChange}
+                    />
+                    <button type="submit" className="absolute inset-0 left-auto" aria-label="Subscribe" onClick={subscribe}>
                       <span className="absolute inset-0 right-auto w-px -ml-px my-2 bg-gray-300" aria-hidden="true"></span>
                       <svg className="w-3 h-3 fill-current text-blue-600 mx-3 shrink-0" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
                         <path d="M11.707 5.293L7 .586 5.586 2l3 3H0v2h8.586l-3 3L7 11.414l4.707-4.707a1 1 0 000-1.414z" fillRule="nonzero" />
                       </svg>
                     </button>
                   </div>
+                  {isvalid && <p className="text-sm text-orange-400">{errMessage}</p>}
+                  {isSubscribe && <p className="text-sm text-black">{errMessage}</p>}
                   {/* Success message */}
                   {/* <p className="mt-2 text-green-600 text-sm">Thanks for subscribing!</p> */}
                 </div>

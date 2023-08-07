@@ -1,6 +1,7 @@
 import VideoThumb from '../images/hero.png';
 import ModalVideo from '../component/modalVedio';
-import Video from '../video/video.mp4';
+import Video from 'react-youtube';
+import YouTubeVideo from './youtube';
 
 export default function Dashboard() {
   // const openNewTab = (url) => {
@@ -37,15 +38,10 @@ export default function Dashboard() {
           </div>
 
           {/* Hero image */}
-          <ModalVideo
-        thumb={VideoThumb}
-        thumbWidth={768}
-        thumbHeight={432}
-        thumbAlt="Modal video thumbnail"
-        video={Video}
-        videoWidth={1920}
-        videoHeight={1080}
-      />
+          <div style={{display:'flex',alignItems:'center',justifyContent:'center'}}>
+             <YouTubeVideo/>
+          </div>
+          
         </div>
       </div>
     </section>

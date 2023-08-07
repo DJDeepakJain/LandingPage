@@ -20,7 +20,7 @@ export default function Newsletter() {
         const requestBody = {
           email: email,
         };
-        const response = await fetch(`http://localhost:8484/auth/newsletters`, {
+        const response = await fetch(`https://api.offerghosting.com/auth/newsletters`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
