@@ -58,7 +58,7 @@ export default function Footer() {
   };
   
   return (
-    <footer className="bg-gray-400 text-white p-4">
+    <footer className="bg-gradient-to-r from-teal-500 to-white backdrop-blur-sm shadow-lg text-white p-4">
         <div className="max-w-6xl mx-auto  sm:px-6 pb-4">
         <div >
               <Logo />
