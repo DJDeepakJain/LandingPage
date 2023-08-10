@@ -65,10 +65,10 @@ export default function Footer() {
     </div>
     <div className="max-w-6xl mx-auto px-4 sm:px-6">
         {/* Top area: Blocks */}
-        <div className="grid sm:grid-cols-12 gap-8 py-8 md:py-12 border-t border-gray-200">
+        <div className="grid sm:grid-cols-12 gap-4 py-8 md:py-12 border-t border-gray-200">
           {/* 1st block */}
           <div className="sm:col-span-6 md:col-span-3 lg:col-span-2" style={{ textAlign: 'start' }}>
-          <h6 className="text-gray-800 font-medium mb-2">Heading</h6>
+          <h6 className="text-gray-800 font-medium mb-2">Agreements</h6>
             <div className="text-sm text-gray-600">
                <a href="/termsService" target='__blank'
               className="text-gray-600 hover:text-gray-900 hover:underline transition duration-150 ease-in-out">

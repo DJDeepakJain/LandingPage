@@ -28,7 +28,7 @@ export default function Dashboard() {
               <div className="max-w-xs mx-auto sm:max-w-none sm:flex sm:justify-center" data-aos="zoom-y-out" data-aos-delay="300" style={{ margin: '50px', textAlign:'-webkit-center' }}>
                 <div style={{marginBottom:'50px',width:'max-content'}}>
                   {/* class="btn-sm rounded-md text-gray-200 bg-gray-900 hover:bg-gray-800 ml-3 flex items-center p-2" */}
-                  <a className="btn text-white rounded-lg  bg-blue-600 hover:bg-blue-700 w-full mb-4 sm:w-auto sm:mb-0 p-4" target="_blank" href="http://app.offerghosting.com/register" rel="noopener noreferrer">Start free trial</a>
+                  <a className="btn text-white rounded-lg  bg-blue-600 hover:bg-blue-700 w-full mb-4 sm:w-auto sm:mb-0 p-4" target="_blank" href="http://app.offerghosting.com/register" rel="noopener noreferrer">Start Free Trial</a>
                 </div>
                 <div style={{width:'max-content'}}>
                   <a className="btn text-white rounded-lg  bg-gray-900 hover:bg-gray-800 w-full sm:w-auto sm:ml-4 p-4" target="_blank" href="http://app.offerghosting.com" rel="noopener noreferrer">Learn more about Alpha Launch</a>

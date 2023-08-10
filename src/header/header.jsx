@@ -34,15 +34,16 @@ export default function Header() {
           <nav className="hidden md:flex md:grow">
             <ul className="flex grow justify-end flex-wrap items-center">
               <li style={{width:'12%'}}>
-                <a href="https://app.offerghosting.com" className="btn-sm rounded-full text-gray-200 border justify-center  ml-3 md:ml-6 flex items-center p-2">
-                  Sign in
+                <a href="https://app.offerghosting.com" className="btn-sm font-bold rounded-full text-gray-200 border justify-center  ml-3 md:ml-6 flex items-center p-2">
+                  Sign In
                 </a>
               </li>
-              <li className="flex items-center">
-                <a href="https://app.offerghosting.com/register" className="btn-sm rounded-full text-gray-200 bg-gray-900 ml-3 md:ml-6 flex items-center p-2">
-                  <span className="mr-1">Sign up</span>
+              <li  style={{width:'15%'}}>
+                <a href="https://app.offerghosting.com/register" className="btn-sm font-bold bg-gray-900 border-gray-800  rounded-full text-gray-200 border justify-center  ml-3 md:ml-6 flex items-center p-2">
+                  Get Started
                 </a>
               </li>
+              
             </ul>
           </nav>
         </div>
