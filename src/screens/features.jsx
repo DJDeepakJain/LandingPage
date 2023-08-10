@@ -2,6 +2,8 @@ import React, { useState, useRef, useEffect } from 'react';
 import { Transition } from '@headlessui/react';
 // import Image from 'next/image';
 import FeaturesBg from '../images/features-bg.png';
+import FeaturesBg1 from '../images/features-bg1.png';
+import FeaturesBg3 from '../images/features-bg3.png';
 import FeaturesElement from '../images/features-element.png';
 
 export default function Features() {
@@ -32,8 +34,8 @@ export default function Features() {
             <p className="text-xl text-gray-600">
               Finding trust in applications is a must in today's professional world,
               <br />
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-yellow-400">
-                OfferGhosting{' '}
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-blue-800">
+                Offer Ghosting{' '}
               </span>
               Platform brings you that solution.
             </p>
@@ -45,7 +47,7 @@ export default function Features() {
             <div className="max-w-xl md:max-w-none md:w-full mx-auto md:col-span-7 lg:col-span-6 md:mt-6" data-aos="fade-right">
               <div className="md:pr-4 lg:pr-12 xl:pr-16 mb-8">
                 <h3 className="h3 mb-3">Powerful suite of features</h3>
-                <p className="text-xl text-gray-600">
+                <p className="text-xl">
                   Our platform provides you with solutions that are backed and stored in blockchain infrastructure.
                 </p>
               </div>
@@ -62,8 +64,9 @@ export default function Features() {
                   }}
                 >
                   <div>
+                    {/* Candidate List */}
                     <div className="font-bold leading-snug tracking-tight mb-1">Building the simple ecosystem</div>
-                    <div className="text-gray-600">
+                    <div className="">
                       Take searching candidate details to the next level with blockchain features, built for Business
                       teams and candidates.
                     </div>
@@ -85,8 +88,9 @@ export default function Features() {
                   }}
                 >
                   <div>
+                    {/* trust score */}
                     <div className="font-bold leading-snug tracking-tight mb-1">Building a simple ghosting feature</div>
-                    <div className="text-gray-600">
+                    <div className="">
                       Ever felt unjust when the other person is no more responding and you want to be aware and share
                       your experience with the world.
                     </div>
@@ -108,10 +112,11 @@ export default function Features() {
                   }}
                 >
                   <div>
+                    {/* BlockChain */}
                     <div className="font-bold leading-snug tracking-tight mb-1">
                       Manage and store in immutable and central network
                     </div>
-                    <div className="text-gray-600">
+                    <div className="">
                       Manage hiring and applying to job applications more smoothly, transparently, and reliably from the
                       start of job application to the onboarding of applicants.
                     </div>
@@ -145,7 +150,7 @@ export default function Features() {
                   >
                     <div className="relative inline-flex flex-col">
                       <img className="md:max-w-none mx-auto rounded" src={FeaturesBg} width={500} height={462} alt="Features bg" />
-                      <img className="md:max-w-none absolute w-full left-0 transform animate-float" src={FeaturesElement} width={500} height={44} alt="Element" style={{ top: '30%' }} />
+                      {/* <img className="md:max-w-none absolute w-full left-0 transform animate-float" src={FeaturesElement} width={500} height={44} alt="Element" style={{ top: '30%' }} /> */}
                     </div>
                   </Transition>
                   {/* Item 2 */}
@@ -163,8 +168,8 @@ export default function Features() {
                     unmount={false}
                   >
                     <div className="relative inline-flex flex-col">
-                      <img className="md:max-w-none mx-auto rounded" src={FeaturesBg} width={500} height={462} alt="Features bg" />
-                      <img className="md:max-w-none absolute w-full left-0 transform animate-float" src={FeaturesElement} width={500} height={44} alt="Element" style={{ top: '30%' }} />
+                      <img className="md:max-w-none mx-auto rounded" src={FeaturesBg1} width={500} height={462} alt="Features bg" />
+                      {/* <img className="md:max-w-none absolute w-full left-0 transform animate-float" src={FeaturesElement} width={500} height={44} alt="Element" style={{ top: '30%' }} /> */}
                     </div>
                   </Transition>
                   {/* Item 3 */}
@@ -182,8 +187,8 @@ export default function Features() {
                     unmount={false}
                   >
                     <div className="relative inline-flex flex-col">
-                      <img className="md:max-w-none mx-auto rounded" src={FeaturesBg} width={500} height={462} alt="Features bg" />
-                      <img className="md:max-w-none absolute w-full left-0 transform animate-float" src={FeaturesElement} width={500} height={44} alt="Element" style={{ top: '30%' }} />
+                      <img className="md:max-w-none mx-auto rounded" src={FeaturesBg3} width={500} height={462} alt="Features bg" />
+                      {/* <img className="md:max-w-none absolute w-full left-0 transform animate-float" src={FeaturesElement} width={500} height={44} alt="Element" style={{ top: '30%' }} /> */}
                     </div>
                   </Transition>
                 </div>

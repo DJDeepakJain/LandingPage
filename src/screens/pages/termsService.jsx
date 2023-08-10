@@ -33,8 +33,9 @@
               <li className='hover:underline'><a href="#concern">19. Your Comments and Concerns</a></li>
               </ul>
             </nav>
-            
-  <div id="acceptance">
+            <div>
+            <div id="acceptance" >
+            <div style={{marginTop:'10px'}}>
                   <h2><i></i>1. Acceptance of the Terms of Use</h2>
                   <p className="far-star text-justify">Welcome to Sumeru Digital Solutions Private Limited (“Sumeru Digital”). These
                       Terms of Use (&quot;Terms&quot;) governs your access to and use of our website <a href='www.offerghosting.com'>www.offerghosting.com</a>, including any content, functionality and services offered on or through
@@ -53,6 +54,8 @@
                       the Website.<br></br>
                       The “Effective Date” of these Terms is the date you first access the Service.</p>
               </div>
+            </div>
+  
               <div id="modification">
                   <h2><i></i>2. Modification to the Terms of Use or Termination </h2>
                       <p className="far-star text-justify">Sumeru digital reserves the right to modify or terminate the Platform, its features, or
@@ -281,6 +284,7 @@
                       All feedback, comments, requests for technical support and other communications
                       relating to the website should be directed to:<a href="mailto:support@offerghopsting.com">support@offerghosting.com</a>.
                       </p>
+              </div>
               </div>
   
               </div>

@@ -33,13 +33,13 @@ export default function Header() {
           {/* Desktop navigation */}
           <nav className="hidden md:flex md:grow">
             <ul className="flex grow justify-end flex-wrap items-center">
-              <li>
-                <a href="https://app.offerghosting.com" className="font-medium text-gray-600 hover:text-gray-900 px-2 md:px-5 py-3 flex items-center transition duration-150 ease-in-out">
+              <li style={{width:'12%'}}>
+                <a href="https://app.offerghosting.com" className="btn-sm rounded-full text-gray-200 border justify-center  ml-3 md:ml-6 flex items-center p-2">
                   Sign in
                 </a>
               </li>
               <li className="flex items-center">
-                <a href="https://app.offerghosting.com/register" className="btn-sm rounded-md text-gray-200 bg-gray-900 hover:bg-gray-800 ml-3 md:ml-6 flex items-center p-2">
+                <a href="https://app.offerghosting.com/register" className="btn-sm rounded-full text-gray-200 bg-gray-900 ml-3 md:ml-6 flex items-center p-2">
                   <span className="mr-1">Sign up</span>
                 </a>
               </li>
